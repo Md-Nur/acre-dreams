@@ -1,11 +1,13 @@
-import React from 'react'
+import Slider from "../components/Slider/Slider";
+import Estates from "../components/Estates/Estates";
 
 const Home = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
-}
+    <section>
+      <Slider />
+      <Estates />
+    </section>
+  );
+};
 
-export default Home
+export default Home;
