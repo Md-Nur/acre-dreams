@@ -2,10 +2,9 @@ import { IoMdMenu } from "react-icons/io";
 import MyNavLinks from "./MyNavLinks";
 import { NavLink } from "react-router-dom";
 import { useUserAuth } from "../../contexts/UserAuthProvider";
+import NavAvatar from "./NavAvatar";
 
 const Navbar = () => {
-  const { user } = useUserAuth();
-  console.log(user);
   return (
     <nav className="navbar bg-base-100">
       <div className="navbar-start">
@@ -26,21 +25,7 @@ const Navbar = () => {
         <MyNavLinks myClasses="menu menu-horizontal px-1" tabIndex={null} />
       </div>
       <div className="navbar-end mx-5">
-        <div
-          className="tooltip tooltip-bottom"
-          data-tip={user?.displayName || "User Name"}
-        >
-          <div className="avatar">
-            <div className="w-12 mask mask-squircle">
-              <img
-                src={
-                  user?.photoURL ||
-                  "https://as2.ftcdn.net/v2/jpg/02/15/84/43/1000_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
-                }
-              />
-            </div>
-          </div>
-        </div>
+        <NavAvatar />
       </div>
     </nav>
   );

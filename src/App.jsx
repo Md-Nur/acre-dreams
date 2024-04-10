@@ -10,10 +10,11 @@ import { useUserAuth } from "./contexts/UserAuthProvider";
 export default function App() {
   const { setUser, setLoading } = useUserAuth();
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       setLoading(false);
     });
+    return () => unsubscribe();
   }, []);
   return (
     <>

@@ -3,6 +3,8 @@ import Form from "../components/Form/Form";
 
 const Registration = () => {
   const [data, setData] = useState({});
+  
+
   return (
     <Form title="Sign Up" data={data}>
       <div className="form-control">
@@ -41,7 +43,8 @@ const Registration = () => {
         />
       </div>
       <div className="form-control">
-        <label className="label">
+        <label className="label flex-col items-start">
+          
           <span className="label-text">Password</span>
         </label>
         <input

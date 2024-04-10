@@ -13,7 +13,7 @@ import GithubLogin from "../ThirdPartyLoginButton/GithubLogin";
 const Form = ({ children, title, data }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { setLoading } = useUserAuth();
+  const { setLoading, setUser, user } = useUserAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,25 +23,40 @@ const Form = ({ children, title, data }) => {
       signInWithEmailAndPassword(auth, data.email, data.password)
         .then((userCredential) => {
           const user = userCredential.user;
+          navigate(location?.state || "/");
           toast.success(`${user.displayName} Login Successfully`);
         })
-        .catch((err) => toast.error(err.message));
+        .catch((err) => toast.error(err.message))
+        .finally(() => setLoading(false));
     } else if (title === "Sign Up") {
+      const passwordRegex = /(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+      if (passwordRegex.test(data.password)) {
+        toast.error(
+          "Password must be a lower and upper case letter and minimum 6 char long"
+        );
+      }
       createUserWithEmailAndPassword(auth, data.email, data.password)
         .then((userCredential) => {
           const user = userCredential.user;
+          // There have an issue to show the avatar in navbar without reloading
           updateProfile(auth.currentUser, {
             displayName: data.name,
             photoURL: data.photoUrl,
           })
             .then(() => {
-              toast.success(`Welcome ${data.name}!`);
-              navigate(location.state ? location.state : "/");
+              toast.success(`Welcome ${user.displayName}!`);
+              navigate(location?.state || "/");
+              setUser({
+                ...user,
+                displayName: data.name,
+                photoURL: data.photoUrl,
+              });
             })
             .catch((e) => toast.error(e.message));
         })
 
-        .catch((e) => toast.error(e.message));
+        .catch((e) => toast.error(e.message))
+        .finally(() => setLoading(false));
     }
   };
 

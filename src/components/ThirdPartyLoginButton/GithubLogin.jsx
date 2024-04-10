@@ -3,10 +3,13 @@ import { useUserAuth } from "../../contexts/UserAuthProvider";
 import toast from "react-hot-toast";
 import { FaGithub } from "react-icons/fa";
 import auth from "../../firebase/firebase.config";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const GithubLogin = ({ title }) => {
   const provider = new GithubAuthProvider();
   const { setLoading } = useUserAuth();
+  const location = useLocation()
+  const navigate = useNavigate()
   return (
     <button
       onClick={(e) => {
@@ -14,7 +17,9 @@ const GithubLogin = ({ title }) => {
         setLoading(true);
         signInWithPopup(auth, provider)
           .then((result) => {
-            toast.success(`Welcome ${result.user}`);
+            toast.success(`Welcome ${result.user.displayName}`);
+            navigate(location?.state || "/");
+
           })
           .catch((error) => {
             toast.error(error.message);

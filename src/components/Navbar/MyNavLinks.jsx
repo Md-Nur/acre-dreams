@@ -1,11 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../contexts/UserAuthProvider";
 import { signOut } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 
 const MyNavLinks = ({ myClasses, tabIndex }) => {
   const { user, setLoading } = useUserAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <ul tabIndex={tabIndex} className={myClasses}>
       <li>
@@ -27,8 +30,9 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
         <li>
           <button
             onClick={() => {
-              signOut(auth);
               setLoading(true);
+              signOut(auth);
+              navigate(location?.state || "/login");
             }}
           >
             Logout
