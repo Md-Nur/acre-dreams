@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useUserAuth } from "../../contexts/UserAuthProvider";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 const MyNavLinks = ({ myClasses, tabIndex }) => {
+  const { user, setLoading } = useUserAuth();
   return (
     <ul tabIndex={tabIndex} className={myClasses}>
       <li>
@@ -10,7 +14,7 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
       <li>
         <NavLink to="/update-profile">Update Profile</NavLink>
       </li>
-      {true ? (
+      {!user ? (
         <>
           <li>
             <NavLink to="/login">Login</NavLink>
@@ -21,7 +25,14 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
         </>
       ) : (
         <li>
-          <button onClick={() => console.log("Log out")}>Logout</button>
+          <button
+            onClick={() => {
+              signOut(auth);
+              setLoading(true);
+            }}
+          >
+            Logout
+          </button>
         </li>
       )}
     </ul>
