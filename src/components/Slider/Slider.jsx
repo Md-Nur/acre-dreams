@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCreative, Autoplay } from "swiper/modules";
+import { Navigation, EffectFade, Autoplay,Pagination } from "swiper/modules";
 
 // Import Swiper styles
+import "swiper/css/scrollbar";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 // Import Images
 import b1 from "../../assets/bannerPic/b1.jpg";
@@ -18,28 +19,18 @@ const Slider = () => {
     <div className="">
       <Swiper
         grabCursor={true}
-        effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }}
+        effect={"fade"}
         rewind
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 3000,
         }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Navigation, EffectCreative]}
+        modules={[Autoplay, Navigation, EffectFade,Pagination]}
         className="w-screen h-[60vh] md:h-[80vh]"
       >
         <SwiperSlide>
