@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade, Autoplay,Pagination } from "swiper/modules";
+import { Navigation, EffectFade, Autoplay, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css/scrollbar";
@@ -30,20 +30,20 @@ const Slider = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Navigation, EffectFade,Pagination]}
+        modules={[Autoplay, Navigation, EffectFade, Pagination]}
         className="w-full h-[60vh] md:h-[80vh]"
       >
         <SwiperSlide>
-          <img className="bg-cover w-full bg-center" src={b1} />
+          <img className="object-cover w-full bg-center" src={b1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="bg-cover w-full bg-center" src={b2} />
+          <img className="object-cover w-full bg-center" src={b2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="bg-cover w-full bg-center" src={b3} />
+          <img className="object-cover w-full bg-center" src={b3} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="bg-cover w-full bg-center" src={b4} />
+          <img className="object-cover w-full bg-center" src={b4} />
         </SwiperSlide>
       </Swiper>
     </div>

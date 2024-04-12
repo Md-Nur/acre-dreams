@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import Map from "../Map/Map";
+import Map from "../components/Map/Map";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaChartArea } from "react-icons/fa";
 import { PiLineSegmentsBold } from "react-icons/pi";
 import { FaCheckCircle } from "react-icons/fa";
-import FavButton from "../Estates/FavButton";
-import { getFav } from "../../utils/localStorage";
-import RemoveFav from "./RemoveFav";
+import FavButton from "../components/Estates/FavButton";
+import { getFav } from "../utils/localStorage";
+import RemoveFav from "../components/Estates/RemoveFav";
+import { Helmet } from "react-helmet";
 
 const Property = () => {
   const { id } = useParams();
@@ -29,18 +30,17 @@ const Property = () => {
   if (!property) {
     return <span className="loading loading-ball loading-lg"></span>;
   }
-  console.log(getFav());
   return (
     <section className="w-full">
+      <Helmet>
+        <title>{`${property?.estate_title} -- Acre Dreams`}</title>
+      </Helmet>
       <figure className="bg-cover">
         <img
           src={property?.image}
-          alt={property?.title}
+          alt={property?.estate_title}
           className="w-full h-[60vh] md:h-[80vh] object-cover"
         />
-        <figcaption className="text-center text-gray-500 text-xs">
-          {property?.title}
-        </figcaption>
       </figure>
 
       <div className="flex justify-between items-center m-3 p-3 max-w-7xl mx-auto my-20">

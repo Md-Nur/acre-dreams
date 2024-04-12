@@ -7,7 +7,7 @@ import Form from "../components/Form/Form";
 import { useForm } from "react-hook-form";
 import GoogleLogin from "../components/ThirdPartyLoginButton/GoogleLogin";
 import GithubLogin from "../components/ThirdPartyLoginButton/GithubLogin";
-
+import {Helmet} from "react-helmet"
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const location = useLocation();
@@ -33,6 +33,9 @@ const Login = () => {
 
   return (
     <Form title="Login">
+      <Helmet>
+        <title>{`Login || Acre Dreams`}</title>
+      </Helmet>
       <form
         className="card-body bg-base-300 rounded-xl"
         onSubmit={handleSubmit(handleOnSubmit)}

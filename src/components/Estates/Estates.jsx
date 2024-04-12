@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import FavButton from "./FavButton";
 import { getFav } from "../../utils/localStorage";
-import RemoveFav from "../Property/RemoveFav";
+import RemoveFav from "./RemoveFav";
 
 const Estates = () => {
   const [estates, setEstates] = useState([]);

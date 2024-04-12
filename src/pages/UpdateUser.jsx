@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import { useUserAuth } from "../contexts/UserAuthProvider";
+import {Helmet} from "react-helmet"
 
 const UpdateUser = () => {
   const [user] = useState(auth.currentUser);
@@ -25,6 +26,9 @@ const UpdateUser = () => {
   };
   return (
     <section className="w-full">
+      <Helmet>
+        <title>{`${user.displayName} -- update profle || Acre Dreams`}</title>
+        </Helmet>
       <div className="text-center my-10">
         <h1 className="text-2xl font-bold text-center">
           Hi, {user.displayName}.

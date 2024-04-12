@@ -36,6 +36,7 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
               setLoading(true);
               signOut(auth);
               navigate(location?.state || "/login");
+              localStorage.setItem("favs", "");
             }}
           >
             Logout

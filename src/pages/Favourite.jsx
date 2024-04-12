@@ -3,7 +3,8 @@ import { getFav } from "../utils/localStorage";
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { FaLocationDot } from "react-icons/fa6";
-import RemoveFav from "../components/Property/RemoveFav";
+import RemoveFav from "../components/Estates/RemoveFav";
+import { Helmet } from "react-helmet";
 
 const Favourite = () => {
   const [fav, setFav] = useState();
@@ -38,6 +39,9 @@ const Favourite = () => {
   };
   return (
     <section className="w-full">
+      <Helmet>
+        <title>{`Favourite properties || Acre Dreams`}</title>
+      </Helmet>
       <h2 className="text-3xl font-bold my-10 text-center">
         Your Favourites Properties
       </h2>
