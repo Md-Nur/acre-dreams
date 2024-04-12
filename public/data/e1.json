@@ -1,0 +1,16 @@
+{
+  "image": "https://www.agriculture.com/thmb/HwZuJ2LHKuZHvu-wLlCyglpU6W8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RollingCornField-WideShot-2000-aa5c4c2f8a3445508a65afa24a08ff91.jpg",
+  "estate_title": "Spacious Farmland with Scenic Views",
+  "id": 1,
+  "segment_name": "farms",
+  "description": "This sprawling 50-acre farm boasts fertile land, a charming farmhouse, and breathtaking mountain views. Perfect for starting your own agricultural business or enjoying a peaceful rural lifestyle.",
+  "price": 1250000,
+  "status": "Sale",
+  "Area": "50 acres",
+  "location": {
+    "address": "123 Meadow Lane, Springfield, CA"
+  },
+  "facilities": ["Barn", "Silo", "Fencing"],
+  "latitude": 36.1234,
+  "longitude": -117.2345
+}

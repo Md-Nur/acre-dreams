@@ -1,0 +1,16 @@
+{
+  "image": "https://previews.123rf.com/images/anginta/anginta1612/anginta161200695/68052420-lush-forests-fertile-and-peaceful.jpg",
+  "estate_title": "Peaceful Plantation with Lush Greenery",
+  "id": 6,
+  "segment_name": "plantations",
+  "description": "A well-maintained 100-acre plantation with fertile land, a charming main house, and a variety of fruit trees. Ideal for sustainable farming, eco-tourism ventures, or simply enjoying the peacefulness of nature.",
+  "price": 2500000,
+  "status": "Sale",
+  "Area": "100 acres",
+  "location": {
+    "address": "543 Plantation Drive, Savannah, GA"
+  },
+  "facilities": ["Fruit Orchards", "Greenhouse", "Irrigation System"],
+  "latitude": 32.0853,
+  "longitude": -81.0998
+}

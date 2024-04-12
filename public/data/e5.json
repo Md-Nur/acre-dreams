@@ -1,0 +1,16 @@
+{
+  "image": "https://cdn.shopify.com/s/files/1/0504/0288/5785/files/trail-riders-by-lake.jpg",
+  "estate_title": "Modern Ranch with Horseback Riding Trails",
+  "id": 5,
+  "segment_name": "ranches",
+  "description": "This sprawling 2,000-acre ranch boasts rolling hills, pastures, and state-of-the-art equestrian facilities. Perfect for horse enthusiasts, cattle ranchers, or those seeking a luxurious rural retreat.",
+  "price": 18000000,
+  "status": "Rent",
+  "Area": "2,000 acres",
+  "location": {
+    "address": "100 Wrangler Way, Cody, WY"
+  },
+  "facilities": ["Riding Arena", "Stables", "Livestock Pens"],
+  "latitude": 44.5678,
+  "longitude": -109.0123
+}

@@ -1,0 +1,16 @@
+{
+  "image": "https://t4.ftcdn.net/jpg/07/57/22/21/360_F_757222129_l9KHnsZQaQ8S3b5yTvgETSWYwAB44kwK.jpg",
+  "estate_title": "Vineyard Nestled in a Picturesque Valley",
+  "id": 2,
+  "segment_name": "vineyards",
+  "description": "A well-established 20-acre vineyard with rolling hills, a charming tasting room, and a production facility. Ideal for wine enthusiasts looking to invest in a thriving business or create their own private label.",
+  "price": 3800000,
+  "status": "Rent",
+  "Area": "20 acres",
+  "location": {
+    "address": "789 Grapevine Road, Napa Valley, CA"
+  },
+  "facilities": ["Wine Cellar", "Tasting Room", "Irrigation System"],
+  "latitude": 38.2345,
+  "longitude": -122.3456
+}

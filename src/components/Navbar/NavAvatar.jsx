@@ -1,9 +1,7 @@
-import React from "react";
 import { useUserAuth } from "../../contexts/UserAuthProvider";
 
 const NavAvatar = () => {
   const { user, loading } = useUserAuth();
-  console.log("In avatars", loading);
 
   if (loading) return <div className="w-12 skeleton mask mask-squircle"></div>;
 
@@ -13,7 +11,7 @@ const NavAvatar = () => {
       data-tip={user?.displayName || "User Name"}
     >
       <div className="avatar">
-        <div className="w-12 mask mask-squircle">
+        <div className="w-10 mask mask-squircle">
           <img
             src={
               (!loading && user?.photoURL) ||

@@ -1,0 +1,16 @@
+{
+  "image": "https://i0.wp.com/crie.cr/wp-content/uploads/2023/11/parks-in-Costa-Rica.jpg?fit=1344%2C768&ssl=1",
+  "estate_title": "Secluded Forest for Nature Lovers",
+  "id": 3,
+  "segment_name": "forests",
+  "description": "A tranquil 100-acre forest with hiking trails, a babbling brook, and abundant wildlife. Perfect for those seeking a private retreat or a sustainable forestry investment.",
+  "price": 750000,
+  "status": "Sale",
+  "Area": "100 acres",
+  "location": {
+    "address": "456 Evergreen Drive, Cascade Mountains, WA"
+  },
+  "facilities": ["Hiking Trails", "Camping Grounds", "Fishing Access"],
+  "latitude": 47.3456,
+  "longitude": -121.4567
+}

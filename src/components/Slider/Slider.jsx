@@ -16,7 +16,7 @@ import b4 from "../../assets/bannerPic/b4.jpg";
 
 const Slider = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <Swiper
         grabCursor={true}
         effect={"fade"}
@@ -31,7 +31,7 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Navigation, EffectFade,Pagination]}
-        className="w-screen h-[60vh] md:h-[80vh]"
+        className="w-full h-[60vh] md:h-[80vh]"
       >
         <SwiperSlide>
           <img className="bg-cover w-full bg-center" src={b1} />

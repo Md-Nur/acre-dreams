@@ -17,7 +17,10 @@ const Navbar = () => {
             tabIndex={0}
           />
         </div>
-        <NavLink to="/" className="btn btn-ghost text-3xl font-bold">
+        <NavLink
+          to="/"
+          className="btn btn-ghost text-xs sm:text-xl md:text-3xl font-bold"
+        >
           Acre Dreams
         </NavLink>
       </div>

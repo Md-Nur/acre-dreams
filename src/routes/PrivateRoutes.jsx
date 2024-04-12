@@ -5,14 +5,14 @@ import { useEffect } from "react";
 
 const PrivateRoutes = ({ children }) => {
   const loacation = useLocation();
-  const { user, loader } = useUserAuth();
+  const { user, loading } = useUserAuth();
 
-  if (loader) {
+  if (loading) {
     return <span className="loading loading-ball loading-lg"></span>;
   } else if (!user) {
     toast.dismiss();
     toast.error("You must be logged in");
-    return <Navigate state={loacation.state} to="/login" />;
+    return <Navigate state={loacation.pathname} to="/login" />;
   }
 
   return children;

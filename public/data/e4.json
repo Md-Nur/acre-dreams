@@ -1,0 +1,16 @@
+{
+  "image": "https://dominicanhomepro.com/wp-content/uploads/2023/06/fotos-7-scaled.jpg",
+  "estate_title": "Oceanfront Land with Development Potential",
+  "id": 4,
+  "segment_name": "agricultural land",
+  "description": "A prime 15-acre oceanfront property with stunning views and development potential. Ideal for agricultural ventures, a beachfront resort, or a private estate.",
+  "price": 5200000,
+  "status": "Sale",
+  "Area": "15 acres",
+  "location": {
+    "address": "10 Ocean View Drive, Malibu, CA"
+  },
+  "facilities": ["Ocean Views", "Beach Access", "Zoning Flexibility"],
+  "latitude": 34.0522,
+  "longitude": -118.2437
+}
