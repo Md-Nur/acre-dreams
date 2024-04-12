@@ -17,6 +17,9 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
       <li>
         <NavLink to="/update-profile">Update Profile</NavLink>
       </li>
+      <li>
+        <NavLink to="/favourites">Favourites</NavLink>
+      </li>
       {!user ? (
         <>
           <li>

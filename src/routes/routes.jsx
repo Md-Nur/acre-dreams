@@ -7,6 +7,7 @@ import Registration from "../pages/Registration";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateUser from "../pages/UpdateUser";
 import Property from "../components/Property/Property";
+import Favourite from "../pages/Favourite";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Property />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/favourites",
+        element: (
+          <PrivateRoutes>
+            <Favourite />
           </PrivateRoutes>
         ),
       },

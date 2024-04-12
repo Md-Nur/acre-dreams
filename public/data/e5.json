@@ -6,7 +6,7 @@
   "description": "This sprawling 2,000-acre ranch boasts rolling hills, pastures, and state-of-the-art equestrian facilities. Perfect for horse enthusiasts, cattle ranchers, or those seeking a luxurious rural retreat.",
   "price": 18000000,
   "status": "Rent",
-  "Area": "2,000 acres",
+  "Area": "2000 acres",
   "location": {
     "address": "100 Wrangler Way, Cody, WY"
   },

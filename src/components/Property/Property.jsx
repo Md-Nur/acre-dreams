@@ -6,20 +6,30 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaChartArea } from "react-icons/fa";
 import { PiLineSegmentsBold } from "react-icons/pi";
 import { FaCheckCircle } from "react-icons/fa";
+import FavButton from "../Estates/FavButton";
+import { getFav } from "../../utils/localStorage";
+import RemoveFav from "./RemoveFav";
 
 const Property = () => {
   const { id } = useParams();
   const [property, setProperty] = useState(null);
+  const [isFav, setIsFav] = useState(false);
   useEffect(() => {
     fetch(`/data/e${id}.json`)
       .then((res) => res.json())
       .then((data) => setProperty(data))
       .catch((err) => toast.error(err.message));
-  }, []);
+    if (getFav().find((i) => i === parseInt(id))) {
+      setIsFav(true);
+    } else {
+      setIsFav(false);
+    }
+  }, [getFav()]);
 
   if (!property) {
     return <span className="loading loading-ball loading-lg"></span>;
   }
+  console.log(getFav());
   return (
     <section className="w-full">
       <figure className="bg-cover">
@@ -84,13 +94,33 @@ const Property = () => {
           <div className="card bg-base-200 shadow-xl w-full p-5 m-1">
             <h3 className="text-center text-xl font-bold my-5">Facilities:</h3>
             <ul>
-              {property?.facilities.map((fac) => (
-                <li className="text-gray-500 my-3 md:text-lg flex items-center gap-2">
+              {property?.facilities.map((fac, i) => (
+                <li
+                  className="text-gray-500 my-3 md:text-lg flex items-center gap-2"
+                  key={i}
+                >
                   <FaCheckCircle className="text-green-500" />
                   {fac}
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="card bg-base-200 shadow-xl w-full p-5 m-1">
+            {isFav ? (
+              <>
+                <h3 className="text-center text-xl font-bold my-5">
+                  Don't you like this property?
+                </h3>
+                <RemoveFav id={property.id} />
+              </>
+            ) : (
+              <>
+                <h3 className="text-center text-xl font-bold my-5">
+                  Do you like this property?
+                </h3>
+                <FavButton id={property.id} />
+              </>
+            )}
           </div>
         </div>
       </div>

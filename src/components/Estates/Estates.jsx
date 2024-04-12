@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
+import FavButton from "./FavButton";
+import { getFav } from "../../utils/localStorage";
+import RemoveFav from "../Property/RemoveFav";
 
 const Estates = () => {
   const [estates, setEstates] = useState([]);
+  const [favIds, setFavIds] = useState([]);
+
   useEffect(() => {
     fetch("/data/estate.json")
       .then((res) => res.json())
@@ -12,8 +17,8 @@ const Estates = () => {
       .catch((err) => {
         toast.error(err.message);
       });
-  }, []);
-  console.log(estates);
+    setFavIds(estates.filter((e) => getFav().includes(e.id)));
+  }, [getFav()]);
   return (
     <div className="m-1 p-1 my-10">
       <h2 className="text-4xl mb-5 text-center font-bold">Land Estates</h2>
@@ -48,9 +53,14 @@ const Estates = () => {
                   </div>
                   <div className="badge badge-outline">{estate.Area}</div>
                 </div>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-end space-x-2">
+                  {favIds.find((e) => e.id === estate.id) ? (
+                    <RemoveFav id={estate.id} />
+                  ) : (
+                    <FavButton id={estate.id} />
+                  )}
                   <Link
-                    to={`property/${estate.id}`}
+                    to={`/property/${estate.id}`}
                     className="btn btn-success"
                   >
                     View Property
