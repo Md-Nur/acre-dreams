@@ -5,20 +5,25 @@ import { FaLocationDot } from "react-icons/fa6";
 import FavButton from "./FavButton";
 import { getFav } from "../../utils/localStorage";
 import RemoveFav from "./RemoveFav";
+import { useFavs } from "../../contexts/FavourtieProvide";
 
 const Estates = () => {
   const [estates, setEstates] = useState([]);
-  const [favIds, setFavIds] = useState([]);
+  const {favs, setFavs} = useFavs()
 
   useEffect(() => {
     fetch("/data/estate.json")
       .then((res) => res.json())
       .then((data) => setEstates(data))
+      // .then(() => setFavIds(estates.filter((e) => getFav().includes(e.id))))
       .catch((err) => {
         toast.error(err.message);
       });
-    setFavIds(estates.filter((e) => getFav().includes(e.id)));
-  }, [getFav()]);
+  }, []);
+
+  if (!estates.length) {
+    return <span className="loading loading-bars loading-lg"></span>;
+  }
   return (
     <div className="m-1 p-1 my-10">
       <h2 className="text-4xl mb-5 text-center font-bold">Land Estates</h2>
@@ -54,7 +59,7 @@ const Estates = () => {
                   <div className="badge badge-outline">{estate.Area}</div>
                 </div>
                 <div className="card-actions justify-end space-x-2">
-                  {favIds.find((e) => e.id === estate.id) ? (
+                  {favs.find((e) => e.id === estate.id) ? (
                     <RemoveFav id={estate.id} />
                   ) : (
                     <FavButton id={estate.id} />

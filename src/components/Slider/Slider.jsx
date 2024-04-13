@@ -9,10 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // Import Images
-import b1 from "../../assets/bannerPic/b1.jpg";
-import b2 from "../../assets/bannerPic/b2.jpg";
-import b3 from "../../assets/bannerPic/b3.jpg";
-import b4 from "../../assets/bannerPic/b4.jpg";
 
 const Slider = () => {
   return (
@@ -34,16 +30,28 @@ const Slider = () => {
         className="w-full h-[60vh] md:h-[80vh]"
       >
         <SwiperSlide>
-          <img className="object-cover w-full bg-center" src={b1} />
+          <img
+            className="object-cover w-full bg-center"
+            src="/bannerPic/b1.jpg"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="object-cover w-full bg-center" src={b2} />
+          <img
+            className="object-cover w-full bg-center"
+            src="/bannerPic/b2.jpg"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="object-cover w-full bg-center" src={b3} />
+          <img
+            className="object-cover w-full bg-center"
+            src="/bannerPic/b3.jpg"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="object-cover w-full bg-center" src={b4} />
+          <img
+            className="object-cover w-full bg-center"
+            src="/bannerPic/b4.jpg"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

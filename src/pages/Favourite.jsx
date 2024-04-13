@@ -5,21 +5,15 @@ import { toast } from "react-hot-toast";
 import { FaLocationDot } from "react-icons/fa6";
 import RemoveFav from "../components/Estates/RemoveFav";
 import { Helmet } from "react-helmet";
+import { useFavs } from "../contexts/FavourtieProvide";
 
 const Favourite = () => {
-  const [fav, setFav] = useState();
-  useEffect(() => {
-    fetch("/data/estate.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFav(data.filter((d) => getFav().includes(d.id)));
-      })
-      .catch((err) => toast.error(err.message));
-  }, [getFav()]);
-  if (!fav) {
+  const { favs, setFavs } = useFavs();
+
+  if (!favs) {
     return <span className="loading loading-bars loading-lg"></span>;
   }
-  if (!fav.length) {
+  if (!favs.length) {
     return (
       <h3 className="text-xl font-semibold text-center">
         You don't have any favourite item
@@ -28,13 +22,13 @@ const Favourite = () => {
   }
   const handleSort = (sortField) => {
     if (sortField === "Area") {
-      setFav(
-        [...fav].sort(
+      setFavs(
+        [...favs].sort(
           (a, b) => parseInt(a.Area.split(" ")) - parseInt(b.Area.split(" "))
         )
       );
     } else if (sortField === "price") {
-      setFav([...fav].sort((a, b) => parseInt(a.price) - parseInt(b.price)));
+      setFavs([...favs].sort((a, b) => parseInt(a.price) - parseInt(b.price)));
     }
   };
   return (
@@ -48,15 +42,16 @@ const Favourite = () => {
       <select
         className="select select-primary w-40 block mx-auto"
         onClick={(e) => handleSort(e.target.value)}
+        defaultValue={`Sort Properties`}
       >
-        <option disabled selected>
+        <option disabled>
           Sort Properties
         </option>
         <option value="Area">Area</option>
         <option value="price">Price</option>
       </select>
       <div className="m-1 p-1 md:m-3 md:p-3 lg:m-5 lg:p-5">
-        {fav.map((f) => (
+        {favs.map((f) => (
           <div
             className="card md:card-side bg-base-100 shadow-xl m-5"
             key={f.id}
@@ -72,7 +67,7 @@ const Favourite = () => {
               <h2 className="card-title">{f.estate_title}</h2>
               <p className="flex items-center gap-1">
                 <FaLocationDot />
-                {f.location.address}
+                {f.location?.address}
               </p>
               <div className="card-actions justify-start">
                 <div className="badge badge-outline">$ {f.price}</div>
