@@ -3,8 +3,10 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../contexts/UserAuthProvider";
 import { signOut } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { useFavs } from "../../contexts/FavourtieProvide";
 
 const MyNavLinks = ({ myClasses, tabIndex }) => {
+  const { setFavs } = useFavs();
   const { user, setLoading } = useUserAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,6 +39,7 @@ const MyNavLinks = ({ myClasses, tabIndex }) => {
               signOut(auth);
               navigate(location?.state || "/login");
               localStorage.setItem("favs", "");
+              setFavs([]);
             }}
           >
             Logout
