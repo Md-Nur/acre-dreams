@@ -33,7 +33,7 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('/bannerPic/b1.jpg')" }}
+            style={{ backgroundImage: "url('https://ibb.co/wwtFLYc')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Prime Locations, Endless Possibilities
@@ -43,30 +43,30 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('/bannerPic/b4.jpg')" }}
+            style={{ backgroundImage: "url('https://ibb.co/yB8z1ZJ')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
-            Find Freedom and Space on Your Own Land
+              Find Freedom and Space on Your Own Land
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('/bannerPic/b2.jpg')" }}
+            style={{ backgroundImage: "url('https://ibb.co/NWZdwrj')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
-            Secure Your Future: Invest in Land Today
+              Secure Your Future: Invest in Land Today
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('/bannerPic/b3.jpg')" }}
+            style={{ backgroundImage: "url('https://ibb.co/p30hFdB')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#00000090]">
-            Grow Your Portfolio with Solid Ground
+              Grow Your Portfolio with Solid Ground
             </h1>
           </div>
         </SwiperSlide>
