@@ -33,7 +33,7 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://ibb.co/wwtFLYc')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co/7Rhdzbk/b1.jpg')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Prime Locations, Endless Possibilities
@@ -43,7 +43,7 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://ibb.co/yB8z1ZJ')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co/3SB9tvN/b4.jpg')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Find Freedom and Space on Your Own Land
@@ -53,7 +53,7 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://ibb.co/NWZdwrj')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co/LhCTWcf/b2.jpg')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Secure Your Future: Invest in Land Today
@@ -63,7 +63,7 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://ibb.co/p30hFdB')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co/xMCFT6t/b3.jpg')" }}
           >
             <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#00000090]">
               Grow Your Portfolio with Solid Ground

@@ -6,10 +6,11 @@ import FavButton from "./FavButton";
 import { getFav } from "../../utils/localStorage";
 import RemoveFav from "./RemoveFav";
 import { useFavs } from "../../contexts/FavourtieProvide";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Estates = () => {
   const [estates, setEstates] = useState([]);
-  const {favs, setFavs} = useFavs()
+  const { favs, setFavs } = useFavs();
 
   useEffect(() => {
     fetch("/data/estate.json")
@@ -44,13 +45,25 @@ const Estates = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">
-                  {estate.estate_title}
+                  {estate.id}.&nbsp;{estate.estate_title}
                   <div className="badge badge-secondary">{estate.status}</div>
                 </h2>
                 <p className="flex items-center gap-1">
                   <FaLocationDot />
                   {estate.location.address}
                 </p>
+                <p className="flex items-center gap-1">{estate.description}</p>
+                <div className="my-1">
+                  Facilities:
+                  <ul className="flex flex-wrap">
+                    {estate.facilities.map((f, i) => (
+                      <li className="flex mx-1 gap-1 items-center" key={i}>
+                        <FaCheckCircle className="text-green-500" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="card-actions justify-start">
                   <div className="badge badge-outline">$ {estate.price}</div>
                   <div className="badge badge-outline">
