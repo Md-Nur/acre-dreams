@@ -1,0 +1,98 @@
+[
+  {
+    "image": "https://www.agriculture.com/thmb/HwZuJ2LHKuZHvu-wLlCyglpU6W8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RollingCornField-WideShot-2000-aa5c4c2f8a3445508a65afa24a08ff91.jpg",
+    "estate_title": "Spacious Farmland with Scenic Views",
+    "id": 1,
+    "segment_name": "farms",
+    "description": "This sprawling 50-acre farm boasts fertile land, a charming farmhouse, and breathtaking mountain views. Perfect for starting your own agricultural business or enjoying a peaceful rural lifestyle.",
+    "price": 1250000,
+    "status": "Sale",
+    "Area": "50 acres",
+    "location": {
+      "address": "123 Meadow Lane, Springfield, CA"
+    },
+    "facilities": ["Barn", "Silo", "Fencing"],
+    "latitude": 36.1234,
+    "longitude": -117.2345
+  },
+  {
+    "image": "https://t4.ftcdn.net/jpg/07/57/22/21/360_F_757222129_l9KHnsZQaQ8S3b5yTvgETSWYwAB44kwK.jpg",
+    "estate_title": "Vineyard Nestled in a Picturesque Valley",
+    "id": 2,
+    "segment_name": "vineyards",
+    "description": "A well-established 20-acre vineyard with rolling hills, a charming tasting room, and a production facility. Ideal for wine enthusiasts looking to invest in a thriving business or create their own private label.",
+    "price": 3800000,
+    "status": "Rent",
+    "Area": "20 acres",
+    "location": {
+      "address": "789 Grapevine Road, Napa Valley, CA"
+    },
+    "facilities": ["Wine Cellar", "Tasting Room", "Irrigation System"],
+    "latitude": 38.2345,
+    "longitude": -122.3456
+  },
+  {
+    "image": "https://i0.wp.com/crie.cr/wp-content/uploads/2023/11/parks-in-Costa-Rica.jpg?fit=1344%2C768&ssl=1",
+    "estate_title": "Secluded Forest for Nature Lovers",
+    "id": 3,
+    "segment_name": "forests",
+    "description": "A tranquil 100-acre forest with hiking trails, a babbling brook, and abundant wildlife. Perfect for those seeking a private retreat or a sustainable forestry investment.",
+    "price": 750000,
+    "status": "Sale",
+    "Area": "100 acres",
+    "location": {
+      "address": "456 Evergreen Drive, Cascade Mountains, WA"
+    },
+    "facilities": ["Hiking Trails", "Camping Grounds", "Fishing Access"],
+    "latitude": 47.3456,
+    "longitude": -121.4567
+  },
+  {
+    "image": "https://dominicanhomepro.com/wp-content/uploads/2023/06/fotos-7-scaled.jpg",
+    "estate_title": "Oceanfront Land with Development Potential",
+    "id": 4,
+    "segment_name": "agricultural land",
+    "description": "A prime 15-acre oceanfront property with stunning views and development potential. Ideal for agricultural ventures, a beachfront resort, or a private estate.",
+    "price": 5200000,
+    "status": "Sale",
+    "Area": "15 acres",
+    "location": {
+      "address": "10 Ocean View Drive, Malibu, CA"
+    },
+    "facilities": ["Ocean Views", "Beach Access", "Zoning Flexibility"],
+    "latitude": 34.0522,
+    "longitude": -118.2437
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/0504/0288/5785/files/trail-riders-by-lake.jpg",
+    "estate_title": "Modern Ranch with Horseback Riding Trails",
+    "id": 5,
+    "segment_name": "ranches",
+    "description": "This sprawling 2,000-acre ranch boasts rolling hills, pastures, and state-of-the-art equestrian facilities. Perfect for horse enthusiasts, cattle ranchers, or those seeking a luxurious rural retreat.",
+    "price": 18000000,
+    "status": "Rent",
+    "Area": "2000 acres",
+    "location": {
+      "address": "100 Wrangler Way, Cody, WY"
+    },
+    "facilities": ["Riding Arena", "Stables", "Livestock Pens"],
+    "latitude": 44.5678,
+    "longitude": -109.0123
+  },
+  {
+    "image": "https://previews.123rf.com/images/anginta/anginta1612/anginta161200695/68052420-lush-forests-fertile-and-peaceful.jpg",
+    "estate_title": "Peaceful Plantation with Lush Greenery",
+    "id": 6,
+    "segment_name": "plantations",
+    "description": "A well-maintained 100-acre plantation with fertile land, a charming main house, and a variety of fruit trees. Ideal for sustainable farming, eco-tourism ventures, or simply enjoying the peacefulness of nature.",
+    "price": 2500000,
+    "status": "Sale",
+    "Area": "100 acres",
+    "location": {
+      "address": "543 Plantation Drive, Savannah, GA"
+    },
+    "facilities": ["Fruit Orchards", "Greenhouse", "Irrigation System"],
+    "latitude": 32.0853,
+    "longitude": -81.0998
+  }
+]

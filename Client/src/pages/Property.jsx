@@ -16,7 +16,7 @@ const Property = () => {
   const [property, setProperty] = useState(null);
   const [isFav, setIsFav] = useState(false);
   useEffect(() => {
-    fetch(`/data/e${id}.json`)
+    fetch(`http://localhost:5000/api/estates/${id}`)
       .then((res) => res.json())
       .then((data) => setProperty(data))
       .catch((err) => toast.error(err.message));

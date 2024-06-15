@@ -33,9 +33,11 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://i.ibb.co/7Rhdzbk/b1.jpg')" }}
+            style={{
+              backgroundImage: "url('https://i.ibb.co/7Rhdzbk/b1.jpg')",
+            }}
           >
-            <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
+            <h1 className="text-white shadow-xl text-xl md:text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Prime Locations, Endless Possibilities
             </h1>
           </div>
@@ -43,9 +45,11 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://i.ibb.co/3SB9tvN/b4.jpg')" }}
+            style={{
+              backgroundImage: "url('https://i.ibb.co/3SB9tvN/b4.jpg')",
+            }}
           >
-            <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
+            <h1 className="text-white shadow-xl text-xl md:text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Find Freedom and Space on Your Own Land
             </h1>
           </div>
@@ -53,9 +57,11 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://i.ibb.co/LhCTWcf/b2.jpg')" }}
+            style={{
+              backgroundImage: "url('https://i.ibb.co/LhCTWcf/b2.jpg')",
+            }}
           >
-            <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
+            <h1 className="text-white shadow-xl text-xl md:text-4xl font-bold w-full h-full flex items-center justify-center bg-[#0000007a]">
               Secure Your Future: Invest in Land Today
             </h1>
           </div>
@@ -63,9 +69,11 @@ const Slider = () => {
         <SwiperSlide>
           <div
             className="bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: "url('https://i.ibb.co/xMCFT6t/b3.jpg')" }}
+            style={{
+              backgroundImage: "url('https://i.ibb.co/xMCFT6t/b3.jpg')",
+            }}
           >
-            <h1 className="text-white shadow-xl text-4xl font-bold w-full h-full flex items-center justify-center bg-[#00000090]">
+            <h1 className="text-white shadow-xl text-xl md:text-4xl font-bold w-full h-full flex items-center justify-center bg-[#00000090]">
               Grow Your Portfolio with Solid Ground
             </h1>
           </div>

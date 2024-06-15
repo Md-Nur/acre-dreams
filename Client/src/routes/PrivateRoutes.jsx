@@ -1,7 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { useUserAuth } from "../contexts/UserAuthProvider";
 import toast from "react-hot-toast";
-import { useEffect } from "react";
 
 const PrivateRoutes = ({ children }) => {
   const loacation = useLocation();

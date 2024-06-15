@@ -13,7 +13,8 @@ const Estates = () => {
   const { favs, setFavs } = useFavs();
 
   useEffect(() => {
-    fetch("/data/estate.json")
+    // fetch("/data/estate.json")
+    fetch("http://localhost:5000/api/estates")
       .then((res) => res.json())
       .then((data) => setEstates(data))
       // .then(() => setFavIds(estates.filter((e) => getFav().includes(e.id))))
